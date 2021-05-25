@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CV</title>
+		<style>
+			body{
+				font-family:sans-serif;
+				background:#eaf0ff;
+				margin-top:0;
+				margin-bottom:0;
+			}
+
+			.content{
+				max-width:120em;
+				margin:auto;
+				border-style:solid;
+				background:white;
+				padding:1em;
+				margin-top:1em;
+				margin-bottom:1em;
+				min-height:calc(100vh - 6em);
+				border-radius:0.7em;
+				
+			}
+
+
+			.hist{
+				grid-row:elements;
+				background-color:#eeeeee;
+				text-align:center;
+				border-radius:0.5em;
+				line-height:3em;
+				padding-left:0.2em;
+				padding-right:0.2em;
+			}
+			.hist-edu{
+				/* TODO mortarboard icon */
+			}
+			.hist-work{
+				/* TODO suit and tie icon */
+			}
+			.hist-ee{
+				background-color:#349134;
+				color:white;
+			}
+			.hist-cs{
+				background-color:#3a3aff;
+				color:white;
+			}
+			.hist-int{
+				background-color:#ffcece;
+			}
+			.hist-perm{
+				background-color:#710071;
+				color:white;
+			}
+			.time-3mo{
+				grid-column-end:span 1;
+			}
+			.time-6mo{
+				grid-column-end:span 2;
+			}
+			.time-9mo{
+				grid-column-end:span 3;
+			}
+			.time-15mo{
+				grid-column-end:span 5;
+			}
+			.time-1yr{
+				grid-column-end:span 4;
+			}
+			.time-2yr{
+				grid-column-end:span 8;
+			}
+
+			.timeline{
+				display:grid;
+				grid-template-columns: repeat(3em);
+				grid-template-rows: [ruler] 3em [elements] 3em;
+			}
+			.time-ruler{
+				grid-row: ruler;
+				border: solid 1px black;
+				border-top-style:none;
+				border-bottom-style:none;
+				text-align:center;
+				line-height:3em;
+			}
+
+			.round{
+				border-radius:0.5em;
+				padding-left:1em;
+			}
+
+			.hover-section{
+				border-radius:0.5em;
+				padding-left:1em;
+				padding-right:1em;
+			}
+			.hover-section:hover{
+				background-color:#eeeeee;
+			}
+
+			.anon-controls{
+				border:1px solid black;
+				border-radius:0.5em;
+				float:right;
+				padding:1em;
+				margin:0;
+				margin-left:1em;
+				margin-bottom:1em;
+			}
+			.anon-controls>h2{
+				font-size:1em;
+			}
+			.anon-controls>h2, .anon-controls>p{
+				margin:0;
+			}
+		</style>
+		<style id='anon_default' type='text/css'>
+			.anon-visible{ display:none; }
+			.anon-invisible{ display:intial; }
+			.anon-redacted{ }
+
+			.anon-inst-visible{ display:none; }
+			.anon-inst-invisible{ display:initial; }
+			.anon-inst-redacted{ }
+		</style>
+		<style id='anon_enabled' type='text/conditional_css'>
+			.anon-visible{ display:initial; }
+			.anon-invisible{ display:none; }
+			.anon-redacted>span{ display:none; }
+			.anon-redacted::after{content:'[indentifying information redacted]';}
+		</style>
+		<style id='anon_inst_enabled' type='text/conditional_css'>
+			.anon-inst-visible{ display:initial; }
+			.anon-inst-invisible{ display:none; }
+			.anon-inst-redacted>span{ display:none; }
+			.anon-inst-redacted::after{content:'[instituation name redacted]';}
+		</style>
+		<script>
+			function set_css(name, enabled){
+				document.getElementById(name).type=enabled?'text/css':'text/conditional_css'
+			}
+		</script>
+	</head>
+	<body>
+		<div class='content'>
+			<div class='anon-controls'>
+				<h2>Anonymity controls</h2>
+				<p><input id='anon' type='checkbox' onchange='set_css("anon_enabled", this.checked)'/><label for='anon'>Hide identifying information</label></p>
+				<p><input id='anon-inst' type='checkbox' onchange='set_css("anon_inst_enabled", this.checked)'/><label for='anon-inst'>Hide names of institutions and companies</label></p>
+				<script>
+					document.getElementById('anon').checked = false;
+					document.getElementById('anon-inst').checked = false;
+				</script>
+			</div>
+			<p class='anon-visible'>Some potentially identifying information has been redacted from this CV.</p>
+			<p class='anon-inst-visible'>Names of institutions or companies have been redacted from this CV.</p>
+			<h1><span class='anon-redacted'><span>Daniel Bailey</span></span>'s CV</h1>
+			<p>Hi, I'm <span class='anon-redacted'><span>Dan</span></span>, and my pronouns are <span class='anon-redacted'><span>he/him</span></span>. I've spent most of my professional career so far working at <span class='anon-inst-invisible'>Arm Research</span><span class='anon-inst-visible'>a large semiconductor IP company [instituation name redacted]</span>. My expertise is in development of tools for assisting with the development of computer architectures. I have written cycle-accurate performance models of CPU cores, requiring deep understanding of the architecture and implementation details. I have also developed tools for formal verification of CPUs in various ways. I enjoy contributing to open source software and hardware, although don't get as much opportunity to do this at the moment.</p>
+			<p>My ideal job would be in developing tools to assist with developing, implementing, and formally verifying all kinds of computer hardware. I'd be at my happiest when those tools are open-source. I also really enjoy developing such hardware too, finding creative ways to efficiently implement CPU architectures, and designing them to be fun and easy to implement.</p>
+			<section>
+				<h2>My education and work timeline</h2>
+				<p>A quick overview of my education and work history.</p>
+				<p>I have studied Electronic Engieering and Computer Science at <span class='anon-inst-redacted'><span>the University of York</span></span>. During my studies I worked four summer internships at <span class='anon-inst-invisible'>Arm Research</span><span class='anon-inst-visible'>a large semiconductor IP company [company name redacted]</span> where I am now a permanent employee, and have been for about two years.</p>
+				<div class='timeline'>
+					<div style='grid-column-start:1' class='time-ruler time-3mo'>2013</div>
+					<div style='grid-column-start:2' class='time-ruler time-1yr'>2014</div>
+					<div style='grid-column-start:6' class='time-ruler time-1yr'>2015</div>
+					<div style='grid-column-start:10' class='time-ruler time-1yr'>2016</div>
+					<div style='grid-column-start:14' class='time-ruler time-1yr'>2017</div>
+					<div style='grid-column-start:18' class='time-ruler time-1yr'>2018</div>
+					<div style='grid-column-start:22' class='time-ruler time-1yr'>2019</div>
+					<div style='grid-column-start:26' class='time-ruler time-1yr'>2020</div>
+					<div style='grid-column-start:30' class='time-ruler time-6mo'>2021</div>
+					<div style='grid-column-start:1' class='time-9mo hist hist-edu hist-ee'>EE Yr1</div>
+					<div style='grid-column-start:4' class='time-3mo hist hist-work hist-int'>Intern</div>
+					<div style='grid-column-start:5' class='time-9mo hist hist-edu hist-ee'>EE Yr2</div>
+					<div style='grid-column-start:8' class='time-15mo hist hist-work hist-int'>Intern</div>
+					<div style='grid-column-start:13' class='time-9mo hist hist-edu hist-cs'>CS Yr1</div>
+					<div style='grid-column-start:16' class='time-3mo hist hist-work hist-int'>Intern</div>
+					<div style='grid-column-start:17' class='time-9mo hist hist-edu hist-cs'>CS Yr2</div>
+					<div style='grid-column-start:20' class='time-3mo hist hist-work hist-int'>Intern</div>
+					<div style='grid-column-start:21' class='time-9mo hist hist-edu hist-cs'>CS Yr3</div>
+					<div style='grid-column-start:24' class='time-2yr hist hist-work hist-perm'><span class='anon-inst-redacted'><span>Arm Research</span></span></div>
+				</div>
+				<p>In quasi-reverse-time order...</p>
+				<section class='hover-section'>
+					<h3 class='round hist-perm'>Senior Research Engineer at <span class='anon-inst-redacted'><span>Arm</span></span></h3>
+					<p>I joined <span class='anon-inst-redacted'><span>Arm Research</span></span> as a full time permanent employee in 2019. I started as a Research Engineer, but have since been promoted to Senior Research Engineer.</p>
+					<p>During this time I have been developing tooling for formal verification of some of <span class='anon-inst-redacted'><span>Arm</span></span>'s CPU architectures. I have taken the lead on development of these tools, which include formal proof tools, fuzzing tools, and various other small development related tools.</p>
+				</section>
+				<section class='hover-section'>
+					<h3 class='round hist-cs'>Computer Science Degree (BEng) from <span class='anon-inst-redacted'><span>the Univeristy of York</span></span></h3>
+					<p>I graduated from <span class='anon-inst-redacted'><span>the Univeristy of York</span></span> with a first-class degree in Computer Science in 2019. I started the degree in 2016.</p>
+				</section>
+				<section class='hover-section'>
+					<h3 class='round hist-int'>Various internships at <span class='anon-inst-redacted'><span>Arm Research</span></span></h3>
+					<p>During my time as an undergraduate, I spent several summers doing internships in <span class='anon-inst-redacted'><span>Arm Research.</span></span> These were all between 2014 and 2018. I worked on various projects during this time. The largest was during a 15-month internship in between my undergraduate university courses. On this internship I lead the development of cycle-accurate performance models for an in-development CPU architecture extension and analysed results from experimentation on this model to inform the development process.</p>
+					<p>Another project I worked on during an internship was: tooling for analysing the performance of garbage collection algorithm performance on CPUs, and experimentation to learn which methods work best for a particular design of CPU.</p>
+				</section>
+				<section class='hover-section'>
+					<h3 class='round hist-ee'>Electronic Engineering Certificate of Higher Education from <span class='anon-inst-redacted'><span>the University of York</span></span></h3>
+					<p>I started studying Electronic Engineering with Nanotechnology at <span class='anon-inst-redacted'><span>the Univeristy of York</span></span> in 2013, but after my internship in the summer of 2014, and my experience with the second year of the course. I decided that I would rather study Computer Science. I left this course after two years (in 2015), saved enough money during an internship to be able to start a CS degree, and moved to the CS department at the same university in 2016.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Skills</h2>
+				<p>Through my time in university and the world of work, I have reached a very high skill level in the following areas:</p>
+				<ul>
+					<li>Programming in C, Python, Java, Arm Assembly, and various shell and build system languages, as well as various languages to lesser degrees.</li>
+					<li>Working on large software and hardware projects with a team, colaborating with tools including: Jira, Git, and various Git related tools.</li>
+					<li>Solving problems independently.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>My Hobbies (AKA: The fun part of my CV)</h2>
+				<p>In my free time, I enjoy making things. I have way too many crazy ideas, and not enough free time to make them all. Some of the things I make are software tools, most of which are avaiable from my github page. I also sometimes do hardware projects.</p>
+				<p>One such hardware project that I would particularly like to show off is a really tiny CPU that I designed. It's called C88. It was inspired by the Small Scale Experimental Machine (SSEM) build in Manchester around 1948. It has only 8 bytes of RAM (that's right, only 8 bytes, I told you it was small). It has a front pannel of switches to manually load a program into the machine byte by byte, and has a display that can show the internal state of the machine, in a way very similar to the SSEM. It can show the contents of the RAM, and the values of the one internal register and the program counter. It also has a GPIO port and a small library of programs. There's a dice roll program (randomly chooses a number from 1 to 6), a "steady hand" game played with a rotary encoder atached to the GPIO which needs to be turned at a constant rate to increase your score, and a few other fun programs.</p>
+				<p>You can find on my github page several repositories related to this CPU. One of them is the main repository with VHDL code for use on an FPGA. Another is a simulator written in Javascript, mostly written by a friend of mine. And lastly there is a Dynamic Binary Translator (DBT) which enables you to run C88 programs on an Arm Cortex-M Microcontroler.</p>
+				<p>My C88, and another processor I was working on, have both been featured multiple times in computer magazines. TODO: issue and page numbers for Custom PC.</p>
+				<p>Another hardware project I have done, with a group of friends from <span class='anon-inst-redacted'><span>York Hackspace</span></span>, was a project to build a multiplayer cooperative game where players must communicate quickly with each other in order to try and save a spaceship from its inevitable doom. This is implemented as four large consoles of buttons, knobs, and switches, which must be manipulated at the right times. It runs on a Raspberry Pi and four BeagleBone embedded computers. This was called "Spacehack". We have taken this game to many Maker Faires and Maker Faire style events over the years.</p>
+
+				<p>I have some outdoor hobbies too, I enjoy cycling and geocaching.</p>
+			</section>
+			<section>
+				<h2>Contact me</h2>
+				<div class='anon-visible'><p>This is the anonymous version of my CV. If you wish to contact me then please ask the person who gave you this CV for my contact details, or ask them to contact me on your behalf.</p></div>
+				<div class='anon-invisible'>
+					<p>Contact me by email: danieljabailey (at) gmail (dot) com</p>
+					<p>Find my github page: https://github.com/danieljabailey</p>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
