@@ -1,0 +1,2 @@
+#/usr/bin/env fish
+find -name '*.jpg' | grep -v '\.thumb\.jpg' | sed 's/^\(.*\)\.jpg$/convert \1.jpg -thumbnail 500 \1.thumb.jpg/' | bash
