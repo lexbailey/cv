@@ -116,6 +116,11 @@
 			.anon-controls>h2, .anon-controls>p{
 				margin:0;
 			}
+			.heading-icon{float:right;}
+			.clear{clear:both;}
+			.photo{
+				max-width:600px;
+			}
 		</style>
 		<style id='anon_default' type='text/css'>
 			.anon-visible{ display:none; }
@@ -136,7 +141,7 @@
 			.anon-inst-visible{ display:initial; }
 			.anon-inst-invisible{ display:none; }
 			.anon-inst-redacted>span{ display:none; }
-			.anon-inst-redacted::after{content:'[instituation name redacted]';}
+			.anon-inst-redacted::after{content:'[institution name redacted]';}
 		</style>
 		<script>
 			function set_css(name, enabled){
@@ -155,8 +160,8 @@
 					document.getElementById('anon-inst').checked = false;
 				</script>
 			</div>
-			<p class='anon-visible'>Some potentially identifying information has been redacted from this CV.</p>
-			<p class='anon-inst-visible'>Names of institutions or companies have been redacted from this CV.</p>
+			<p class='anon-visible'>Some potentially identifying information has been redacted from this CV, some links to external sources with identifying information may remain.</p>
+			<p class='anon-inst-visible'>Names of institutions or companies have been redacted from this CV, some links to external sources that identifying these institutions may remain.</p>
 			<h1><span class='anon-redacted'><span>Daniel Bailey</span></span>'s CV</h1>
 			<p>Hi, I'm <span class='anon-redacted'><span>Dan</span></span>, and my pronouns are <span class='anon-redacted'><span>he/him</span></span>. I've spent most of my professional career so far working at <span class='anon-inst-invisible'>Arm Research</span><span class='anon-inst-visible'>a large semiconductor IP company [instituation name redacted]</span>. My expertise is in development of tools for assisting with the development of computer architectures. I have written cycle-accurate performance models of CPU cores, requiring deep understanding of the architecture and implementation details. I have also developed tools for formal verification of CPUs in various ways. I enjoy contributing to open source software and hardware, although I don't get as much opportunity to do this at the moment.</p>
 			<p>My ideal job would be in developing tools to assist with developing, implementing, and formally verifying all kinds of computer hardware. I'd be at my happiest when those tools are open-source. I also really enjoy developing such hardware too, finding creative ways to efficiently implement CPU architectures, and designing them to be fun and easy to implement.</p>
@@ -188,21 +193,36 @@
 				<p>In quasi-reverse-time order...</p>
 				<section class='hover-section'>
 					<h3 class='round hist-perm'>Senior Research Engineer at <span class='anon-inst-redacted'><span>Arm</span></span></h3>
+					<img class='anon-inst-invisible heading-icon' src='images/logos/Arm.svg' height='40' alt='Arm logo'/>
 					<p>I joined <span class='anon-inst-redacted'><span>Arm Research</span></span> as a full time permanent employee in 2019. I started as a Research Engineer, but have since been promoted to Senior Research Engineer.</p>
 					<p>During this time I have been developing tooling for formal verification of some of <span class='anon-inst-redacted'><span>Arm</span></span>'s CPU architectures. I have taken the lead on development of these tools, which include formal proof tools, fuzzing tools, and various other small development related tools.</p>
+					<div class='clear'></div>
 				</section>
 				<section class='hover-section'>
 					<h3 class='round hist-cs'>Computer Science Degree (BEng) from <span class='anon-inst-redacted'><span>the University of York</span></span></h3>
+					<img class='anon-inst-invisible heading-icon' src='images/logos/uoy.png' height='40' alt='University of York logo'/>
 					<p>I graduated from <span class='anon-inst-redacted'><span>the University of York</span></span> with a first-class degree in Computer Science in 2019. I started the degree in 2016.</p>
+					<p>My final-year project was in the areas of machine learning and natural language processing. I developed and compared a few methods for extracting time expressions from English-language prose. You can see a demo of this here: <a href='https://danieljabailey.github.io/timex_extractor_demo/'><span class='anon-invisible'>https://danieljabailey.github.io/timex_extractor_demo/</span><span class='anon-visible'>[link text contains username, redacted for anonymity]</span></a></p>
+					<div class='clear'></div>
 				</section>
 				<section class='hover-section'>
 					<h3 class='round hist-int'>Various internships at <span class='anon-inst-redacted'><span>Arm Research</span></span></h3>
-					<p>During my time as an undergraduate, I spent several summers doing internships in <span class='anon-inst-redacted'><span>Arm Research.</span></span> These were all between 2014 and 2018. I worked on various projects during this time. The largest was during a 15-month internship in between my undergraduate university courses. On this internship I lead the development of cycle-accurate performance models for an in-development CPU architecture extension and analysed results from experimentation on this model to inform the development process.</p>
+					<img class='anon-inst-invisible heading-icon' src='images/logos/Arm.svg' height='40' alt='Arm logo'/>
+					<p>During my time as an undergraduate, I spent several summers doing internships in <span class='anon-inst-redacted'><span>Arm Research.</span></span> These were all between 2014 and 2018. I worked on various projects during this time. The largest was during a 15-month internship in between my undergraduate university courses.</p>
+					<div class='anon-inst-invisible'>
+						<p>A specific project I can talk about from my work at Arm is the 'Helium' extension to the Armv8.1-M architecture. I developed a cycle-accurate model of a prototype implementation of Helium for analysing performance during development. <a href='https://www.arm.com/why-arm/technologies/helium' >https://www.arm.com/why-arm/technologies/helium</a></p>
+					</div>
+					<div class='anon-inst-visible'>
+						<p>A specific project I can talk about from previous work is an architecture development project. [Lots of information redacted from this section to hide names of institutions] I developed a cycle-accurate model of a prototype implementation of a new computer architecture for analysing performance during development.</p>
+					</div>
 					<p>Another project I worked on during an internship was: tooling for analysing the performance of garbage collection algorithm performance on CPUs, and experimentation to learn which methods work best for a particular design of CPU.</p>
+					<div class='clear'></div>
 				</section>
 				<section class='hover-section'>
 					<h3 class='round hist-ee'>Electronic Engineering Certificate of Higher Education from <span class='anon-inst-redacted'><span>the University of York</span></span></h3>
+					<img class='anon-inst-invisible heading-icon' src='images/logos/uoy.png' height='40' alt='University of York logo'/>
 					<p>I started studying Electronic Engineering with Nanotechnology at <span class='anon-inst-redacted'><span>the University of York</span></span> in 2013, but after my internship in the summer of 2014, and my experience with the second year of the course. I decided that I would rather study Computer Science. I left this course after two years (in 2015), saved enough money during an internship to be able to start a CS degree, and moved to the CS department at the same university in 2016.</p>
+					<div class='clear'></div>
 				</section>
 			</section>
 			<section>
@@ -217,16 +237,42 @@
 			<section>
 				<h2>My Hobbies (AKA: The fun part of my CV)</h2>
 				<p>In my free time, I enjoy making things. I have way too many crazy ideas, and not enough free time to make them all. Some of the things I make are software tools, most of which are available from my github page. I also sometimes do hardware projects.</p>
-				<p>One such hardware project that I would particularly like to show off is a really tiny CPU that I designed. It's called C88. It was inspired by the Small Scale Experimental Machine (SSEM) built in Manchester around 1948. It has only 8 bytes of RAM (that's right, only 8 bytes, I told you it was small). It has a front panel of switches to manually load a program into the machine byte by byte, and has a display that can show the internal state of the machine, in a way very similar to the SSEM. It can show the contents of the RAM, and the values of the one internal register and the program counter. It also has a GPIO port and a small library of programs. There's a dice roll program (randomly chooses a number from 1 to 6), a "steady hand" game played with a rotary encoder attached to the GPIO which needs to be turned at a constant rate to increase your score, and a few other fun programs.</p>
-				<p>You can find on my github page several repositories related to this CPU. One of them is the main repository with VHDL code for use on an FPGA. Another is a simulator written in Javascript, mostly written by a friend of mine. And lastly there is a Dynamic Binary Translator (DBT) which enables you to run C88 programs on an Arm Cortex-M Microcontroler.</p>
-				<p>My C88, and another processor I was working on, have both been featured multiple times in computer magazines. TODO: issue and page numbers for Custom PC.</p>
-				<p>Another hardware project I have done, with a group of friends from <span class='anon-inst-redacted'><span>York Hackspace</span></span>, was a project to build a multiplayer cooperative game where players must communicate quickly with each other in order to try and save a spaceship from its inevitable doom. This is implemented as four large consoles of buttons, knobs, and switches, which must be manipulated at the right times. It runs on a Raspberry Pi and four BeagleBone embedded computers. This was called "Spacehack". We have taken this game to many Maker Faires and Maker Faire style events over the years.</p>
+				<section class='hover-section'>
+					<h3>Using formal proof tools to play Among Us</h3>
+					<p>A recent fun project I did was to use the SMT solver Z3 to solve for the hidden game state in a given instance of the popular online multiplayer social deduction game 'Among Us'.</p>
+					<p>I wrote a tool that allows you to input all the information that you learn during the game, and it counts the number of models it can find for each player where that player is the impostor. It does this by generating a boolean expression that is true for all valid game states (including the hidden state) and passes that to Z3 to find models for it. The aim of the game is to find the impostors, and so this tool could aid you when playing the game by telling you who the impostors are or who they are likely to be. The only problem is that when I tried using it for that, I found it was almost never helpful. I became familiar with Z3 and SMT at work (at <span class='anon-inst-redacted'><span>Arm</span></span>) and decided it would be fun to create an interesting but impractical tool using a sophisticated solver just as a demo.</p>
+					<p>This project is on github here: <a href='https://github.com/danieljabailey/solver_for_among_us'><span class='anon-invisible'>https://github.com/danieljabailey/solver_for_among_us</span><span class='anon-visible'>[link text contains username, redacted for anonymity]</span></a></p>
+				</section>
+				<section class='hover-section'>
+					<h3>C88, A Hobby-Project CPU in an FPGA</h3>
+					<p>One hardware project that I would particularly like to show off is a really tiny CPU that I designed. It's called C88. It was inspired by the Small Scale Experimental Machine (SSEM) built in Manchester around 1948. It has only 8 bytes of RAM (that's right, only 8 bytes, I told you it was small). It has a front panel of switches to manually load a program into the machine byte by byte, and has a display that can show the internal state of the machine, in a way very similar to the SSEM. It can show the contents of the RAM, and the values of the one internal register and the program counter. It also has a GPIO port and a small library of programs. There's a dice roll program (randomly chooses a number from 1 to 6), a "steady hand" game played with a rotary encoder attached to the GPIO which needs to be turned at a constant rate to increase your score, and a few other fun programs.</p>
+					<p>You can find on my github page several repositories related to this CPU. One of them is the main repository with VHDL code for use on an FPGA. Another is a simulator written in Javascript, mostly written by a friend of mine. And lastly there is a Dynamic Binary Translator (DBT) which enables you to run C88 programs on an Arm Cortex-M Microcontroler.</p>
+					<p>Below are some photos of the two different physical implementations of the C88. The first two photos show the FPGA implementation, and the last one is of the DBT implementation running on an Arduino Zero in a fancier and slimmer case.</p>
+					<img src='images/photos/C88/front.jpg' class='photo' />
+					<img src='images/photos/C88/angle.jpg' class='photo' />
+					<img src='images/photos/C88/dbt_version.jpg' class='photo' />
+					<p>My C88, and another processor I was working on, have both been featured multiple times in computer magazines. Details available at these links:</p>
+					<p><a href='https://freelance.halfacree.co.uk/2016/06/custom-pc-issue-155/'>https://freelance.halfacree.co.uk/2016/06/custom-pc-issue-155/</a></p>
+					<p><a href='https://freelance.halfacree.co.uk/2018/01/custom-pc-issue-174/'>https://freelance.halfacree.co.uk/2018/01/custom-pc-issue-174/</a></p>
+					<p><a href='https://freelance.halfacree.co.uk/2018/02/hackspace-magazine-issue-4/'>https://freelance.halfacree.co.uk/2018/02/hackspace-magazine-issue-4/</a></p>
+				</section>
+				<section class='hover-section'>
+					<h3>Spacehack, a multiplayer cooperative console game</h3>
+					<p>Another hardware project I have done, with a group of friends from <span class='anon-inst-redacted'><span>York Hackspace</span></span>, was a project to build a multiplayer cooperative game where players must communicate quickly with each other in order to try and save a spaceship from its inevitable doom. This is implemented as four large consoles of buttons, knobs, and switches, which must be manipulated at the right times. It runs on a Raspberry Pi and four BeagleBone embedded computers. This was called "Spacehack". We have taken this game to many Maker Faires and Maker Faire style events over the years.</p>
+					<div class='anon-inst-invisible'>
+						<p>There is some information (not much) about spacehack on York Hackspace's website here: <a href='https://york.hackspace.org.uk/spacehack/'>https://york.hackspace.org.uk/spacehack/</a></p>
+						<p>There's also an article by Make Magazine here: <a href='https://makezine.com/2014/04/26/playing-spacehack-at-maker-faire-uk/'>https://makezine.com/2014/04/26/playing-spacehack-at-maker-faire-uk/</a> (There was a video there too, but sadly it is no longer available)</p>
+					</div>
+					<img src='images/photos/spacehack/newcastle_2015.jpg' class='photo' />
+				</section>
 
 				<p>I have some outdoor hobbies too, I enjoy cycling and geocaching.</p>
 			</section>
 			<section>
 				<h2>Contact me</h2>
-				<div class='anon-visible'><p>This is the anonymous version of my CV. If you wish to contact me then please ask the person who gave you this CV for my contact details, or ask them to contact me on your behalf.</p></div>
+				<div class='anon-visible'>
+					<p>This is the anonymous version of my CV. If you wish to contact me then please ask the person who gave you this CV for my contact details, or ask them to contact me on your behalf.</p>
+				</div>
 				<div class='anon-invisible'>
 					<p>Contact me by email: danieljabailey (at) gmail (dot) com</p>
 					<p>Find my github page: <a href='https://github.com/danieljabailey'>https://github.com/danieljabailey</a></p>
