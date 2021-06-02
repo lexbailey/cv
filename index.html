@@ -47,11 +47,8 @@
 				background-color:#3a3aff;
 				color:white;
 			}
-			.hist-int{
-				background-color:#ffcece;
-			}
-			.hist-perm{
-				background-color:#710071;
+			.hist-arm{
+				background-color:#008fbe;
 				color:white;
 			}
 			.time-3mo{
@@ -161,10 +158,10 @@
 				</script>
 			</div>
 			<p class='anon-visible'>Some potentially identifying information has been redacted from this CV, some links to external sources with identifying information may remain.</p>
-			<p class='anon-inst-visible'>Names of institutions or companies have been redacted from this CV, some links to external sources that identifying these institutions may remain.</p>
+			<p class='anon-inst-visible'>Names of institutions or companies have been redacted from this CV, some links to external sources that identify these institutions may remain.</p>
 			<h1><span class='anon-redacted'><span>Daniel Bailey</span></span>'s CV</h1>
-			<p>Hi, I'm <span class='anon-redacted'><span>Dan</span></span>, and my pronouns are <span class='anon-redacted'><span>he/him</span></span>. I've spent most of my professional career so far working at <span class='anon-inst-invisible'>Arm Research</span><span class='anon-inst-visible'>a large semiconductor IP company [instituation name redacted]</span>. My expertise is in development of tools for assisting with the development of computer architectures. I have written cycle-accurate performance models of CPU cores, requiring deep understanding of the architecture and implementation details. I have also developed tools for formal verification of CPUs in various ways. I enjoy contributing to open source software and hardware, although I don't get as much opportunity to do this at the moment.</p>
-			<p>My ideal job would be in developing tools to assist with developing, implementing, and formally verifying all kinds of computer hardware. I'd be at my happiest when those tools are open-source. I also really enjoy developing such hardware too, finding creative ways to efficiently implement CPU architectures, and designing them to be fun and easy to implement.</p>
+			<p>Hi, I'm <span class='anon-redacted'><span>Dan</span></span>, and my pronouns are <span class='anon-redacted'><span>he/him</span></span>. I've spent most of my professional career so far working at <span class='anon-inst-invisible'>Arm Research</span><span class='anon-inst-visible'>a large semiconductor IP company [institution name redacted]</span>.</p>
+			<p>My expertise is in developing computer architectures, and in the development of tools for assisting architecture development. I am looking for a job in this area.</p>
 			<section>
 				<h2>My education and work timeline</h2>
 				<p>A quick overview of my education and work history.</p>
@@ -180,22 +177,30 @@
 					<div style='grid-column-start:26' class='time-ruler time-1yr'>2020</div>
 					<div style='grid-column-start:30' class='time-ruler time-6mo'>2021</div>
 					<div style='grid-column-start:1' class='time-9mo hist hist-edu hist-ee'>EE Yr1</div>
-					<div style='grid-column-start:4' class='time-3mo hist hist-work hist-int'>Intern</div>
+					<div style='grid-column-start:4' class='time-3mo hist hist-work hist-arm'>Intern</div>
 					<div style='grid-column-start:5' class='time-9mo hist hist-edu hist-ee'>EE Yr2</div>
-					<div style='grid-column-start:8' class='time-15mo hist hist-work hist-int'>Intern</div>
+					<div style='grid-column-start:8' class='time-15mo hist hist-work hist-arm'>Intern</div>
 					<div style='grid-column-start:13' class='time-9mo hist hist-edu hist-cs'>CS Yr1</div>
-					<div style='grid-column-start:16' class='time-3mo hist hist-work hist-int'>Intern</div>
+					<div style='grid-column-start:16' class='time-3mo hist hist-work hist-arm'>Intern</div>
 					<div style='grid-column-start:17' class='time-9mo hist hist-edu hist-cs'>CS Yr2</div>
-					<div style='grid-column-start:20' class='time-3mo hist hist-work hist-int'>Intern</div>
+					<div style='grid-column-start:20' class='time-3mo hist hist-work hist-arm'>Intern</div>
 					<div style='grid-column-start:21' class='time-9mo hist hist-edu hist-cs'>CS Yr3</div>
-					<div style='grid-column-start:24' class='time-2yr hist hist-work hist-perm'><span class='anon-inst-redacted'><span>Arm Research</span></span></div>
+					<div style='grid-column-start:24' class='time-2yr hist hist-work hist-arm'><span class='anon-inst-redacted'><span>Arm Research</span></span></div>
 				</div>
 				<p>In quasi-reverse-time order...</p>
 				<section class='hover-section'>
-					<h3 class='round hist-perm'>Senior Research Engineer at <span class='anon-inst-redacted'><span>Arm</span></span></h3>
+					<h3 class='round hist-arm'>Senior Research Engineer & Various internships at <span class='anon-inst-redacted'><span>Arm Research</span></span></h3>
 					<img class='anon-inst-invisible heading-icon' src='images/logos/Arm.svg' height='40' alt='Arm logo'/>
-					<p>I joined <span class='anon-inst-redacted'><span>Arm Research</span></span> as a full time permanent employee in 2019. I started as a Research Engineer, but have since been promoted to Senior Research Engineer.</p>
-					<p>During this time I have been developing tooling for formal verification of some of <span class='anon-inst-redacted'><span>Arm</span></span>'s CPU architectures. I have taken the lead on development of these tools, which include formal proof tools, fuzzing tools, and various other small development related tools.</p>
+					<p>I joined <span class='anon-inst-redacted'><span>Arm Research</span></span> as a full time permanent employee in 2019. I started as a Research Engineer, but have since been promoted to Senior Research Engineer. I also had four internships at <span class='anon-inst-redacted'><span>Arm</span></span> during my undergraduate study.</p>
+					<p>In total I've worked here for four years, in which time I developed...
+						<ul>
+							<li>Formal verification tooling for parts of <span class='anon-inst-redacted'><span>Arm</span></span>'s CPU architectures.</li>
+							<li>A fuzzing tool for random testing of security related architecture.</li>
+							<li>A cycle accurate model of an architecture in-development for performance analysis. This has since been released as 'Helium' <a href='https://www.arm.com/why-arm/technologies/helium' ><span class='anon-inst-invisible'>https://www.arm.com/why-arm/technologies/helium/</span><span class='anon-inst-visible'>[link text contains company name, redacted]</span></a></li>
+							<li>Tooling for analysing the performance of garbage collection algorithms, and experimentation to learn which methods work best for a particular design of CPU.</li>
+						</ul>
+					</p>
+					
 					<div class='clear'></div>
 				</section>
 				<section class='hover-section'>
@@ -205,19 +210,7 @@
 					<p>My final-year project was in the areas of machine learning and natural language processing. I developed and compared a few methods for extracting time expressions from English-language prose. You can see a demo of this here: <a href='https://danieljabailey.github.io/timex_extractor_demo/'><span class='anon-invisible'>https://danieljabailey.github.io/timex_extractor_demo/</span><span class='anon-visible'>[link text contains username, redacted for anonymity]</span></a></p>
 					<div class='clear'></div>
 				</section>
-				<section class='hover-section'>
-					<h3 class='round hist-int'>Various internships at <span class='anon-inst-redacted'><span>Arm Research</span></span></h3>
-					<img class='anon-inst-invisible heading-icon' src='images/logos/Arm.svg' height='40' alt='Arm logo'/>
-					<p>During my time as an undergraduate, I spent several summers doing internships in <span class='anon-inst-redacted'><span>Arm Research.</span></span> These were all between 2014 and 2018. I worked on various projects during this time. The largest was during a 15-month internship in between my undergraduate university courses.</p>
-					<div class='anon-inst-invisible'>
-						<p>A specific project I can talk about from my work at Arm is the 'Helium' extension to the Armv8.1-M architecture. I developed a cycle-accurate model of a prototype implementation of Helium for analysing performance during development. <a href='https://www.arm.com/why-arm/technologies/helium' >https://www.arm.com/why-arm/technologies/helium</a></p>
-					</div>
-					<div class='anon-inst-visible'>
-						<p>A specific project I can talk about from previous work is an architecture development project. [Lots of information redacted from this section to hide names of institutions] I developed a cycle-accurate model of a prototype implementation of a new computer architecture for analysing performance during development.</p>
-					</div>
-					<p>Another project I worked on during an internship was: tooling for analysing the performance of garbage collection algorithm performance on CPUs, and experimentation to learn which methods work best for a particular design of CPU.</p>
-					<div class='clear'></div>
-				</section>
+
 				<section class='hover-section'>
 					<h3 class='round hist-ee'>Electronic Engineering Certificate of Higher Education from <span class='anon-inst-redacted'><span>the University of York</span></span></h3>
 					<img class='anon-inst-invisible heading-icon' src='images/logos/uoy.png' height='40' alt='University of York logo'/>
@@ -275,7 +268,7 @@
 					<a href='images/photos/spacehack/newcastle_2015.jpg'><img src='images/photos/spacehack/newcastle_2015.thumb.jpg' class='photo' /></a>
 				</section>
 
-				<p>I have some outdoor hobbies too, I enjoy cycling and geocaching.</p>
+				<p>I have some outdoor hobbies too, I enjoy cycling and geocaching. :)</p>
 			</section>
 			<section>
 				<h2>Contact me</h2>
