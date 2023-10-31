@@ -1,0 +1,88 @@
+body{
+	font-family:sans-serif;
+	background:#eaf0ff;
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.content{
+	max-width:60em;
+	margin:auto;
+	border-style:solid;
+	background:white;
+	padding:1em;
+	margin-top:1em;
+	margin-bottom:1em;
+	min-height:calc(100vh - 6em);
+}
+
+
+.hist{
+	grid-row:elements;
+	background-color:#eeeeee;
+	text-align:center;
+	line-height:3em;
+	padding-left:0.2em;
+	padding-right:0.2em;
+}
+.hist-edu{
+	/* TODO mortarboard icon */
+}
+.hist-work{
+	/* TODO suit and tie icon */
+}
+.hist-ee{
+	background-color:#349134;
+	color:white;
+}
+.hist-cs, .hist-phd{
+	background-color:#3a3aff;
+	color:white;
+}
+.hist-arm{
+	background-color:#008fbe;
+	color:white;
+}
+
+.round{
+	padding-left:1em;
+    padding-top:0.2em;
+    padding-bottom:0.1em;
+}
+
+.hover-section{
+	border-radius:0.5em;
+	padding-left:1em;
+	padding-right:1em;
+}
+.hover-section:hover{
+	background-color:#eeeeee;
+}
+
+.anon-controls{
+	border:1px solid black;
+	float:right;
+	padding:1em;
+	margin:0;
+	margin-left:1em;
+	margin-bottom:1em;
+}
+.anon-controls>h2{
+	font-size:1em;
+}
+.anon-controls>h2, .anon-controls>p{
+	margin:0;
+}
+.heading-icon{
+    float:right;
+    margin-left:1em;
+}
+.clear{clear:both;}
+.photo{
+	max-width:600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
